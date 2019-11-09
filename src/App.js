@@ -5,12 +5,13 @@ import Home from "./components/Home";
 import News from "./components/News";
 import Login from "./components/Login"
 import {BrowserRouter as Router,Route,Link,Redirect} from "react-router-dom";
+import {isLogin} from "./assets/publicData";
 
 class App extends Component{
     constructor(props){
         super(props);
         this.state={
-            isLogin:0
+            isLogin:localStorage.getItem("isLogin")
         }
     }
     render() {
