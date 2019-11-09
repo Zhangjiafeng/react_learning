@@ -15,22 +15,36 @@ class App extends Component{
         }
     }
     render() {
-        const {isLogin:login}=this.state;
+        let login=localStorage.getItem("isLogin")
         return (
             <Router>
                 <div>
+                    <Route path="/login" component={Login}/>
                     {
+
                         login?<div>
                             <Link to="/">首页</Link>
                             <Link to="/news">新闻</Link>
                             <Link to="/core">核心</Link>
-                        </div>:<Redirect  to={{pathname:'/login'}}/>
+                            <Route exact path="/" component={Home}/>
+                            <Route path="/news" component={News}/>
+                            <Route path="/core" component={Core}/>
+                            <Route path="/content/:aid" component={Content}/>
+                        </div>:<div>
+                            <Redirect to={{pathname:'/login'}}/>
+
+                        </div>
                     }
-                    <Route path="/login" component={Login}/>
-                    <Route exact path="/" component={Home}/>
-                    <Route path="/news" component={News}/>
-                    <Route path="/core" component={Core}/>
-                    <Route path="/content/:aid" component={Content}/>
+                    {/*{*/}
+                    {/*    login?<div>*/}
+                    {/*        <Route path="/login" component={Login}/>*/}
+                    {/*        <Link to="/">首页</Link>*/}
+                    {/*        <Link to="/news">新闻</Link>*/}
+                    {/*        <Link to="/core">核心</Link>*/}
+                    {/*    </div>:<Redirect  to={{pathname:'/login'}}/>*/}
+                    {/*}*/}
+
+
                     {/*exact为严格匹配*/}
                 </div>
             </Router>

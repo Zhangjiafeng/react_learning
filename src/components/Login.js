@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Button, Input} from "antd";
-import {Redirect} from "react-router-dom"
+import {BrowserRouter as Router,Route,Link,Redirect} from "react-router-dom"
 import {isLogin} from "../assets/publicData";
 class Login extends Component{
     constructor(props){
@@ -15,8 +15,10 @@ class Login extends Component{
         this.setState({
             isLogin:1
         })
+        document.location.href="/"
     }
     render() {
+        console.log('1')
         return (
             <div style={{margin:"150px auto",width:"20%"}}>
                 {
