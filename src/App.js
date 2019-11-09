@@ -20,32 +20,17 @@ class App extends Component{
             <Router>
                 <div>
                     <Route path="/login" component={Login}/>
+                    <Route exact path="/" component={Home}/>
+                    <Route path="/news" component={News}/>
+                    <Route path="/core" component={Core}/>
+                    <Route path="/content/:aid" component={Content}/>
                     {
 
-                        login?<div>
-                            <Link to="/">首页</Link>
-                            <Link to="/news">新闻</Link>
-                            <Link to="/core">核心</Link>
-                            <Route exact path="/" component={Home}/>
-                            <Route path="/news" component={News}/>
-                            <Route path="/core" component={Core}/>
-                            <Route path="/content/:aid" component={Content}/>
-                        </div>:<div>
+                        login?null:<div>
                             <Redirect to={{pathname:'/login'}}/>
 
                         </div>
                     }
-                    {/*{*/}
-                    {/*    login?<div>*/}
-                    {/*        <Route path="/login" component={Login}/>*/}
-                    {/*        <Link to="/">首页</Link>*/}
-                    {/*        <Link to="/news">新闻</Link>*/}
-                    {/*        <Link to="/core">核心</Link>*/}
-                    {/*    </div>:<Redirect  to={{pathname:'/login'}}/>*/}
-                    {/*}*/}
-
-
-                    {/*exact为严格匹配*/}
                 </div>
             </Router>
         );
