@@ -12,13 +12,13 @@ class Login extends Component{
         localStorage.setItem("isLogin","1");
         this.setState({
             isLogin:1
-        })
+        });
         document.location.href="/";
     }
     render() {
         return (
             <div className="loginBox">
-                <div className="loginPhoto"></div>
+                <div className="loginPhoto"/>
                 <Input className="loginUser" placeholder="username"
                        prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
                 />

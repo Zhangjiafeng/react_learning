@@ -22,7 +22,6 @@ class App extends Component{
                     <Route path="/pContent" component={pContent}/>
                     <Route path="/powerpoint" component={Powerpoint}/>
                     {
-n
                         login?null:
                             <div>
                                 <Redirect to={{pathname:'/login'}}/>

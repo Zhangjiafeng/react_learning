@@ -13,18 +13,15 @@ class News extends Component{
     }
     render() {
         return(
-            <div>
-                <h2>{this.state.userInfo}</h2>
-                <ul>
-                    {
-                        this.state.list.map((value, index) => {
-                            return<li key={index}>
-                                <Link to={`/content/${value.aid}`}>{value.title}</Link>
-                            </li>
-                        })
-                    }
-                </ul>
-            </div>
+            <ul>
+                {
+                    this.state.list.map((value, index) => {
+                        return<li key={index}>
+                            <Link to={`/content/${value.aid}`}>{value.title}</Link>
+                        </li>
+                    })
+                }
+            </ul>
         )
     }
 }

@@ -11,9 +11,6 @@ class Powerpoint extends Component{
     }
     componentDidMount() {
         let that=this;
-        // document.onkeydown=function(event){
-        //     console.log(event.code)
-        // }
         window.addEventListener("keypress",function(e){
             switch(e.code.toString()){
                 case "KeyW":
