@@ -1,23 +1,96 @@
 @import '~antd/dist/antd.css';
-.App {
-  text-align: center;
+
+@media screen and (max-width: 480px) {
+    .loginBox{
+        width:80%;
+        margin:0px auto;
+        padding-top:100px;
+        height:300px;
+    }
+    .loginPhoto{
+        width:5em;
+        height:5em;
+        background: aqua;
+        border-radius: 50%;
+        margin:0 auto 2em;
+    }
+    .loginUser{
+        width:100%;
+        height:10vw;
+        margin-bottom:5vw;
+    }
+    .loginPass{
+        width:100%;
+        height: 10vw;
+        margin-bottom:8vw;
+    }
+    .loginBtn{
+        width:80%;
+        display: block;
+        margin:0 auto;
+        height:3em;
+    }
 }
 
-.App-logo {
-  height: 40vmin;
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+    .ant-input{
+        font-size:1.5em;
+    }
+    .loginBox{
+        width:75%;
+        margin:0 auto;
+        padding-top:20vh;
+    }
+    .loginPhoto{
+        width:15vw;
+        height:15vw;
+        border-radius: 50%;
+        background: aqua;
+        margin:0 auto 5vw;
+    }
+    .loginUser{
+        height: 5vh;
+    }
+    .loginPass{
+        height: 5vh;
+        margin:3vw 0 4vw;
+    }
+    .loginBtn{
+        width:80%;
+        height:5vh;
+        font-size: 1.2em;
+        margin:0 auto;
+        display: block;
+    }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media screen and (min-width: 1025px) {
+    .loginBox{
+        width:30%;
+        height:200px;
+        margin:0 auto;
+        padding-top:150px;
+    }
+    .loginPhoto{
+        width:6em;
+        height:6em;
+        border-radius: 50%;
+        background: aqua;
+        margin:0 auto 3em;
+    }
+    .loginUser{
+        height:3em;
+        margin-bottom: 20px;
+    }
+    .loginPass{
+        height:3em;
+        margin-bottom: 35px;
+    }
+    .loginBtn{
+        height:3em;
+        width:90%;
+        margin:0 auto;
+        display: block;
+    }
 }
 
-.App-link {
-  color: #09d3ac;
-}

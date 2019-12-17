@@ -4,16 +4,11 @@ import './components/Home.js'
 import Home from "./components/Home";
 import News from "./components/News";
 import Login from "./components/Login"
-import {BrowserRouter as Router,Route,Link,Redirect} from "react-router-dom";
-import {isLogin} from "./assets/publicData";
+import pContent from  "./components/Pcontent"
+import Powerpoint from "./components/Powerpoint";
+import {BrowserRouter as Router,Route,Redirect} from "react-router-dom";
 
 class App extends Component{
-    constructor(props){
-        super(props);
-        this.state={
-            isLogin:localStorage.getItem("isLogin")
-        }
-    }
     render() {
         let login=localStorage.getItem("isLogin")
         return (
@@ -24,12 +19,14 @@ class App extends Component{
                     <Route path="/news" component={News}/>
                     <Route path="/core" component={Core}/>
                     <Route path="/content/:aid" component={Content}/>
+                    <Route path="/pContent" component={pContent}/>
+                    <Route path="/powerpoint" component={Powerpoint}/>
                     {
-
-                        login?null:<div>
-                            <Redirect to={{pathname:'/login'}}/>
-
-                        </div>
+n
+                        login?null:
+                            <div>
+                                <Redirect to={{pathname:'/login'}}/>
+                            </div>
                     }
                 </div>
             </Router>
