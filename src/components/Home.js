@@ -14,10 +14,15 @@ class Home extends Component{
             checked:!this.state.checked
         })
     }
+    outLogin=()=>{
+        localStorage.setItem("isLogin","");
+        document.location.href="/login";
+    }
     render() {
         return(
             <div>
                 <h3>这是Home</h3>
+                <a style={{display:"block"}} onClick={this.outLogin}>退出登录</a>
                 <Link to={'/news'}>新闻</Link>
                 <Link to={'/powerpoint'}>PPT</Link>
                 <div style={{position:"relative"}}>
